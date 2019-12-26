@@ -15,7 +15,7 @@ public class JmsProducer {
   @Autowired
   private JmsTemplate jmsTemplate;
 
-  @Value("${activemq.default-destination}")
+  @Value("${jms-queue}")
   String destination;
 
   public void send(String message) {
