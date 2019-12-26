@@ -19,7 +19,7 @@ public class JmsProducer {
   String destination;
 
   public void send(String message) {
-    log.info("Sending message='{}'", message);
     jmsTemplate.convertAndSend(destination, message);
+    log.info("Sent message='{}'", message);
   }
 }
