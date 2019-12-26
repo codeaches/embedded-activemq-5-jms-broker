@@ -11,21 +11,21 @@ import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 @Configuration
 public class JmsConsumerConfig {
 
-    Logger log = LoggerFactory.getLogger(JmsConsumerConfig.class);
+  Logger log = LoggerFactory.getLogger(JmsConsumerConfig.class);
 
-    @Value("${activemq.broker-url}")
-    String brokerUrl;
+  @Value("${activemq.broker-url}")
+  String brokerUrl;
 
-    @Bean
-    ActiveMQConnectionFactory consumerActiveMQConnectionFactory() {
-	return new ActiveMQConnectionFactory(brokerUrl);
-    }
+  @Bean
+  ActiveMQConnectionFactory consumerActiveMQConnectionFactory() {
+    return new ActiveMQConnectionFactory(brokerUrl);
+  }
 
-    @Bean
-    public DefaultJmsListenerContainerFactory jmsListenerContainerFactory() {
+  @Bean
+  public DefaultJmsListenerContainerFactory jmsListenerContainerFactory() {
 
-	DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
-	factory.setConnectionFactory(consumerActiveMQConnectionFactory());
-	return factory;
-    }
+    DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
+    factory.setConnectionFactory(consumerActiveMQConnectionFactory());
+    return factory;
+  }
 }

@@ -8,16 +8,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class JmsEmbeddedBroker {
 
-    @Value("${activemq.broker-url}")
-    String brokerUrl;
+  @Value("${activemq.broker-url}")
+  String brokerUrl;
 
-    @Bean
-    BrokerService broker() throws Exception {
+  @Bean
+  BrokerService broker() throws Exception {
 
-	BrokerService broker = new BrokerService();
-	broker.setPersistent(false);
-	broker.setUseJmx(true);
-	broker.addConnector(brokerUrl);
-	return broker;
-    }
+    BrokerService broker = new BrokerService();
+    broker.setPersistent(false);
+    broker.setUseJmx(true);
+    broker.addConnector(brokerUrl);
+    return broker;
+  }
 }

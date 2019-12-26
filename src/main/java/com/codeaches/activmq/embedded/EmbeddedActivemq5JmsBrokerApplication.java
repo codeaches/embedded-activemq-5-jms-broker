@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EmbeddedActivemqJmsBrokerApplication {
+public class EmbeddedActivemq5JmsBrokerApplication {
 
-    public static void main(String[] args) {
-	SpringApplication.run(EmbeddedActivemqJmsBrokerApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(EmbeddedActivemq5JmsBrokerApplication.class, args);
+  }
 }
