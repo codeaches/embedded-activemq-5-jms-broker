@@ -11,7 +11,7 @@
 	</parent>
 
 	<groupId>com.codeaches</groupId>
-	<artifactId>embedded-activemq-jms-broker</artifactId>
+	<artifactId>embedded-activemq-5-jms-broker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<description>demo project for spring boot</description>
